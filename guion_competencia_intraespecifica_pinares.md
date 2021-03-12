@@ -96,11 +96,9 @@ Las plantas toman del suelo el agua que necesitan para vivir. Por ello es muy im
 
 La siguiente figura muestra una versión simplificada del flujo de trabajo que seguiremos durante el desarrollo de la actividad. Un flujo de trabajo es una representación gráfica de una serie de procedimientos ordenados secuencialmente y que van encaminados a lograr un objetivo concreto. Esta primera versión del flujo de trabajo 
 
-![flujograma_simple]
+![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/imagenes/flujograma_pinares_simplificado.png)
 
-
-
-El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Puedes acceder a [este](https://drive.google.com/file/d/1--LHT3pof0kQduS_CRljo4is__Eeo3EE/view?usp=sharing) enlace para descargar el flujo de trabajo o también estudiarlo con detalle abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/) .
+El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/presentaciones/flujograma_pinares_repoblacion.drawio) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
 
 
 
@@ -110,8 +108,6 @@ El siguiente esquema es un documento dinámico creado con una herramienta llamad
 Para empezar, recordemos la pregunta planteada: Queremos identificar zonas del territorio que estén ocupadas por pinares de repoblación que sean susceptibles de recibir tratamientos forestales de reducción de la competencia intraespecífica (aclarado de pinares) con objeto de maximizar la regeneración de la vegetación natural. Es decir, de alguna manera queremos identificar las áreas del territorio que reúnan unas condiciones más adecuadas para soportar dichos tratamientos. O dicho de otra manera más, vamos a asignar una "puntuación" a los distintos pinares en función de que satisfagan o no una serie de criterios que consideramos importantes.
 
 Así que el primer paso es identificar las variables ambientales y los criterios de manejo con los que vamos a trabajar. En nuestro caso serán los siguientes:
-
-
 
 
 
