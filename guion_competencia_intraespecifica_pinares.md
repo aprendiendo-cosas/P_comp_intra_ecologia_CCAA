@@ -1,24 +1,52 @@
-# Guión de la práctica "Cuantificación de la competencia intraespecífica en la gestión forestal: el caso de los pinares de repoblación"
+# Guión de la práctica "Manejo de pinares de repoblación: un ejemplo de la importancia de la competencia intraespecífica"
 
 
-> + **_Versión_**: 1.0.
+> + **_Versión_**: v.2020-2021
 > + **_Asignatura (grado)_**: Ecología (CCAA)
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
->
->   
+> + **Duración**: Dos sesiones de tres horas cada una.
+
 
 
 
 ## Objetivos y contextualización ecológica
 
-Esta práctica tiene los siguientes objetivos competenciales y operacionales:
+Esta práctica tiene los siguientes objetivos:
 
- + Competenciales: Se refiere al conjunto de habilidades o conocimientos que se espera que adquieran los estudiantes durante el desarollo de esta actividad.
+ + Disciplinares: Están relacionados con la adquisición de competencias y saberes propios de la ecología.
+    + Comprender la importancia de la competencia intraespecífica en un caso de estudio concreto y real: manejo de pinares de repoblación.
+    + Explicitar el proceso de transferencia de conocimiento desde la ciencia hasta la gestión en un caso de estudio concreto.
+    + Constatar la necesidad de incorporar más conceptos que integren y trasciendan la idea de población. 
+    + Aprender la importancia de las escalas espaciales para comprender el funcionamiento de los sistemas ecológicos.
+ + Instrumentales: Están relacionados con la adquisición de competencias en el manejo de herramientas potencialmente útiles en ecología y en otros ámbitos. 
    +    Familiarizarse con el concepto de flujo de trabajo como herramienta básica para planificar los procedimientos de análisis de datos.
-   +    Comprender la importancia de la competencia intraespecífica en un caso de estudio concreto y real: manejo de pinares de repoblación.
-   +    Mejorar la destreza de los estudiantes en el manejo de herramientas informáticas.
    +    Evocar el conocimiento previamente adquirido sobre sistemas de información geográfica.
- +    Operacionales: Son los objetivos que nos planteamos satisfacer durante el desarrollo de la actividad. En este caso el objetivo es responder a la siguiente pregunta: ¿Qué lugares de la zona de estudio ocupados por pinares de repoblación pueden recibir tratamientos selvícolas (y reducir la competencia intraespecífica) para promover el crecimiento de la vegetación natural?
+   +    Aprender el funcionamiento de la técnica de Evaluación Multicriterio como herramienta para integrar información geográfica procedente de fuentes diversas.
+
+El abordaje de los objetivos anteriores se realizará a través del estudio y análisis de una pregunta concreta. Así pues, estas práctica sigue la técnica docente denominada "aprendizaje basado en problemas". Aprenderemos todo lo enumerado anteriormente mediante la resolución de una pregunta concreta que se formulará después de contextualizar ecológicamente el objeto de esta práctica: los pinares de repoblación. [Esta](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/presentaciones/generalidades_pinares_reboblacion_lowres.pdf) presentación muestra con detalle lo enumerado a continuación.
+
+Los pinares de repoblación son masas forestales densas, monoespecíficas y coetáneas que se implantan en el territorio por una serie de razones:
+
++ Producción de madera. No es común en nuestras latitudes. La producción de madera en Andalucía es poco rentable.
++ Frenar la erosión: Es la razón fundamental por la que se realizaron las repoblaciones forestales en Andalucía durante buena parte del siglo XX.
+
+La implantación de los pinares de repoblación en Andalucía consiguió frenar la intensa erosión que habí en nuestros montes a principios del siglo XX. Sin embargo, las repoblaciones se hicieron con una densidad excesiva, lo cual provoca una intensa competencia intraespecífica. Esto, junto con la escasez de tratamientos selvícolas, hace que ahora estas masas generan ciertos problemas socioecológicos. 
+
++ Escasa o nula capacidad de regeneración.
++ Alto riesgo de incendio.
++ Alto riesgo de aparición de plagas forestales devastadoras.
++ Baja biodiversidad.
++ Baja capacidad de proveer servicios ecosistémicos.
++ Baja capacidad de adaptación a un clima cambiante.
++ Baja resiliencia.
+
+Durante esta práctica trataremos de analizar los problemas anteriores y, sobre todo, intentaremos poner en práctica una metodología para minimizarlos: la naturalización de los pinares. Esta técnica de manejo consiste en reducir la densidad de los pinares minimizando la competencia intraespecífica. Esto provoca que dichos pinares sean susceptibles de ser "invadidos" por vegetación natural propia de la zona, lo cual aumenta la biodiversidad, reduce el riesgo de incencio, etc. De manera más específica, en esta práctica trataremos de abordar la siguiente pregunta:
+
+
+
+> **¿Qué lugares de Sierra Nevada ocupados actualmente por pinares de repoblación pueden recibir tratamientos selvícolas (y reducir la competencia intraespecífica) para promover el crecimiento de la vegetación natural?**
+
+
 
 El abordaje de la pregunta anterior se sustenta en los siguientes conceptos ecológicos:
 
@@ -26,10 +54,10 @@ El abordaje de la pregunta anterior se sustenta en los siguientes conceptos ecol
  +    Competencia intraespecífica: Los mencionados pinares no recibieron el tratamiento forestal adecuado durante décadas, por lo que en la actualidad se han convertido en masas densas, monoespecíficas y coetáneas. Esto los convierte en un "antroposistema" en el que la competencia entre individuos de la misma especie es el principal factor que condiciona su funcionamiento. La gran densidad limita su crecimiento y su transformación en masas más diversas. Además tienen gran riesgo de incendio forestal, afección por plagas, etc.
  +    Naturalización de pinares de repoblación: Se define como el conjunto de procedimientos que permiten la transformación de los pinares de repoblación en formaciones vegetales más alineadas con las características del territorio (ej. encinares, matorrales mediterráneos, etc.). Este proceso pasa por reducir la competencia intraespecífica mediante el "aclarado" (thinning) de dichos pinares. La reducción de la competencia permite la entrada de propágulos de otras especies, así como el crecimiento de los pinos que quedan en la masa.
 
-[Esta](https://github.com/fjbonet/teaching_intraspecific_competence/blob/master/presentations_schemes/generalidades_pinares_reboblacion_lowres.pdf) presentación resume alguno de los elementos descritos anteriormente.
+
 
 ## Zona de estudio
-Esta práctica se desarrolla en Sierra Nevada. La razón fundamental es que en ese macizo montañoso abundan los pinares de repoblación. En concreto hay unas 40.000 Has de pinares de repoblación, que suponen aproximadamente la mitad de toda la superficie boscosa de este espacio protegido. 
+Esta práctica se desarrolla en Sierra Nevada. La razón fundamental es que en ese macizo montañoso abundan los pinares de repoblación. En concreto hay unas 40.000 Has de pinares de repoblación, que suponen aproximadamente la mitad de toda la superficie boscosa de este espacio protegido. Otra razón importante es que, con un poco de suerte, haremos una salida de campo a Sierra Nevada ;)
 
 Este mapa muestra la ubicación de Sierra Nevada. Los pinares de repoblación son las formaciones de color verde oscuro que hay en la vertiente norte de la montaña. 
 
@@ -39,9 +67,9 @@ Este mapa muestra la ubicación de Sierra Nevada. Los pinares de repoblación so
 
 ## Flujo de trabajo general
 
-La siguiente figura muestra el flujo de trabajo que seguiremos durante el desarrollo de la actividad. Se trata de un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Puedes acceder a [este](https://drive.google.com/file/d/1--LHT3pof0kQduS_CRljo4is__Eeo3EE/view?usp=sharing) enlace para descargar el flujo de trabajo o también estudiarlo con detalle abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/) .
+La siguiente figura muestra el flujo de trabajo que seguiremos durante el desarrollo de la actividad. Un flujo de trabajo es una representación gráfica de una serie de procedimientos ordenados secuencialmente y que van encaminados a lograr un objetivo concreto. El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Puedes acceder a [este](https://drive.google.com/file/d/1--LHT3pof0kQduS_CRljo4is__Eeo3EE/view?usp=sharing) enlace para descargar el flujo de trabajo o también estudiarlo con detalle abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/) .
 
-<iframe frameborder="0" style="width:100%;height:1171px;" src="https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=pine_plantations_workflow.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fa%2Fgo.ugr.es%2Fuc%3Fid%3D1--LHT3pof0kQduS_CRljo4is__Eeo3EE%26export%3Ddownload"></iframe>
+<iframe frameborder="0" style="width:100%;height:1491px;" src="https://viewer.diagrams.net/?highlight=0000ff&edit=_blank&layers=1&nav=1&title=flujograma_pinares_repoblacion.drawio#R7V1bc%2BK4Ev41VO2eqlC%2BA4%2BEwGzqzGx2SDI7c14oYQvQjG15ZTmB%2BfVHkq9gD5jEIJPsVs0GyzdJre7%2ButXd7ugjb%2F2BgGD1CTvQ7WiKs%2B7oNx1N65sK%2Bz9v2MQNaq8%2FiFuWBDlJW95wj37CpDG5cRkhB4ZbF1KMXYqC7UYb%2Bz606VYbIAQ%2Fb1%2B2wO72WwOwhKWGexu45da%2FkUNXybi0Xt7%2BB0TLVfpm1UrG54H04mQk4Qo4%2BLnQpI87%2BohgTONf3noEXT556bzE901%2BcTbrGIE%2BrXPDo%2F2sLJU%2FlKj%2Fef3V%2BONWD75%2BvVL1pHN0k44YOmwCkkNM6AovsQ%2Fccd56TXDkO5A%2FVmFH%2BTUfMQ5Yo8oav0NKNwk1QUQxa1pRz03OLrBPk5Mqf0R5KMnoQhwRG%2B7rf7IkAFlCuu86Lb6QD67whmSmPkDsQUo27AICXUDR0zb1QbKIltl1%2BTyzH8lUHzHtuiVj2tnsks3X5H5x8I0fdM308GZdPHmzSY7OTy7dPBO5HkNI7ubfueTQFBfMoRvf%2Bulx9GU48yImaCj0AkyAGz%2FbRf6P%2BJIVpVwGDfmjtckS0VU079rYYweL73PsswFqEwqBvUL%2BcobYjIIwgDZaIHvGLgsghT6bLG1CwDPvFQgpJOwH8oOI3xp3QTPjXsxCHz4BB3R%2FoiDuyX6%2BLkxXsiALa217JT2v2BjvAyAo98zE%2BA6zItcdYRcTca%2B%2BWEDLtll7SAn%2BAQtnnN5gruxdH0%2BQULjeS9DkrJ4IzVRtKMnxcy6D1VSwrgry11KOXgLssLAKjmBiw3yfTKzVZGLDkMzEDzejWYB8GM7YetKVLkWLczPxw%2Bimugt7V5Z26dxrbbOvobaQfaVw78u5Tq%2FLdZKZrqNZLuvftYOe2M8l%2F8n5cBwRHMD0JHtW4fx%2BpnSB7zCWDCDxkR2FXRixxgD4V1A8EvjscMWW0BWBIXYjirB%2F5YINJCFnYsxaKf9FCYRXNmaL%2BMqBfogoG9wkpIBG4ZUHAn6JpqhMik4omLN%2BMKzuuxg4NdhVb45dm1edreQ9OfB3jejXwu%2BC3mRHudrkB6nWfDm%2FGjX5tV2GSdLrJ%2BBGyZum0GZzDUjKunOSs22J00cuR6e%2F5vEiW6ywN4%2FCs7BEZoOnPFEBJ%2FsVLNE%2FniXqTfPgkpDjy3mgV5MH%2BpJ11igiT0wREBC%2FA8EnWF7u6UVQuKACvOQOr81%2B3eXA0GaDByGBDgJe10Y26EKuawgMMFdA7N%2F0ccq0TpD6i0xtoqiz0XA6HD2Mp7f%2FG45u7%2F6csZ%2FT24e76e1dfEVvdj28H9%2FPpuPJbPxx%2FCVuNWejx%2BmX4cPjdJg%2B6K%2Fp3bfx6OGOX%2FqBPWn4cXwvzmmKYs3Yc4Z%2F3syYfeXNFM36MrPFuVt%2FwaadjZDhXJC2TBNwy47GD9P7%2FmDGVQ07eridTGqoyV6b1aQ5aKGaVFNGuxCM2q%2FJ7ykkaYnS679NpafurPC%2BZKVnSlnNDTovlZrL2xhI1mcVi9SmKHZExC6I482w5n0jWZeO8o2oSmEuL9I5YhoXoHl6l4RQG%2BTxus5N1WqVCkv7XdBhW0KgQEjrn4hvOYpJuwrFrDEWV1QlWMf6LTmfqTcCuSJUbOBxyKrkVzgopDMxU1t3VYqWZvpS1McNPOY0neQTRrmVsEDQdV48Yy%2BFDrWZ4eX2c4XEOiuSUC%2FKfm5QOll1pdO5LOp69NLe6U5ZbXpp5%2FICHoEYK7bAu%2BFqr6Wzn2mt5oBbEzCszhazKRmGaVJMphYwTl1PgnYuT8IRjHMPXWjbiE05RykBdjsjvTO8YTTAYUdEqvFmJI4O4pAy7qkNYQq9oXFHNqwPoVjibIWLPsCw%2FqP3WYfMxOvGFmLEJooNkdl%2B9EXGYslMTKzWNa0jY%2Fr7ZcxLMZQUQ9E0KiSSWiGRMtF1FpH0Ti1Dra73RzuXZXiESBpyEXStAgeR2EjE%2FK%2FKe8mFkYjZrWvfKXyXxBWirCTbwkz0OTjsnkO8DR0nGQniI6GrYwwvheLsHtF1Cp0tSXmMaNzPNQe8VhKNu96OcZet9C0gZFSIHaMRsdO0Zv0cMQUUydatO71orXYNIXRmsfCrq2RjY%2BWtKdnUDLBaqXSlhOm3QOnWdcdq5wp7q0mvvgx6NTjvtaOXLgbsaG8G7GitBzvGxYAdtcrGOiHYqZkelKaMvTdxX9tf2sId9jg8Cv0EnpAOQsyEKxBAhms4zwGfnxayKAqB7%2BBjZdHp5Us6BJgLF0w8SHZGEoUMZR4tf5oAwg62w%2B4%2FSxR2MWE9mOhdxqoTLtbFKfaHA%2BSZB%2FyIJ2xNAoIZruXdnQF3yc8vHXHiiVEUcyTNREfIRHhX8IGm89Mkn4XDou6AU1uiqBuY26KuCtjKl3TahQOlQU2JpauSJVbOlLRuFtJg%2F9o%2BKtKm%2BfWtqr0LSBLUjcte4Om6PbzA9fap5BFw7chNFLLLoTznAuDbSPyGQvk6%2FHeAYp8SVw7MTLCTQ08gflU4lyCxgY%2FPgvP%2FjnsmOk9zZZx0nv%2BcQ%2FoMY3MG2OleDv%2FjMpgBeA6UQBxcLyMqus%2BMGKHIMfgR63UY0pYp5VjxArbQNyF7WkEls1vWyBM5WwfFln4g91miSlb1%2FgXoZEOy9ZEbHN%2BK505ufeh1Uyz1FlofmWBTDwX47meeBnMZT8FAlnoJOl%2BK90%2B%2B%2BZ5W7TjMQL0zMVBNeiX9%2FlXwbMw9XwCz3oUjkOsvh6kjNkGi4Z%2BIq94VEJpZmPTskgUMha3PJpIDjCX0mWoTxj9XzSTZh4lBiEAfMPchvgAyvGoXizEgcLORRQQKxAAIQcJFiPlOkTLfZEBE7DSJ7gufop0GvPJcbAV5vKTSVpDJFjA50tPYEtW9m01zpZkVkkev2ijSjxc9NRW15OiwbUWtnE%2FO1M0rbaOi5vwwK3BDMfmlDVk5%2B%2Fp3GD40mOMpZTvYKAVDqGYFRJddeejCq7bpdb1mhtY%2BBv7EI6IDF9lCm8eK%2FCzRJsmLN7HzfefFDWzb6Qf8fTINZytlw5Qvq5LmpIdpmO80TCNl04P8bLaQn4Vj3Af0VXZzPAPttZv7yo5e67XQbjbeaWixUTfaxpAdbZPnggaZBx05DHQih1fKyje2F5FvIxGHo%2FuZlUvgAhKYet8RYY8HzOZVbtATYvZ0EmXDny%2BkNv8dm9bCde%2FCDfSFs54NRATi8Eb%2BsgASD9GKki11WrJszTBCFMyRK7zMise4MrF5QZAp3bjTxbHAZLCxy%2F2wnGgoNKYBmWDubJ%2FpVc5oq0qlnrVK3zv1paWsfliltisRPS1%2FfZn0KtmWitKbTCbnoaTVeAyruHVICNgULggw8vmWYPbkv3hDwdOl79jAprJTWHz3BqPff90NqpK4YPOVF%2Fc6X4fZ8I9RVyCgM1HskWmnmh4Mo11ZqjkAa3M5R%2BO9Cum6fozUYfQWgBsSMXNgz2ZFY3Arf91WN8qY6%2FTuUfbyEGY%2B0dBeQU%2FU8RPzhf1ZwFnaF3M0S2co4IM4LHEacrucABJWZqDKh4SSIYas%2BIRUiFwaJEwX1WXS6xSQsDYl2woJ1bR85gkAGxPrNbGa2WApuFNgtVZWdjOl1OJpUArW9jXLroTfPOb6F3I1A7nMA976c1ZpVXYDSzIJ0S7QJdk3LyvWxKzrm28Z6LIuml4nAV11KdlW0KUf8KqZ5uuu7xkHbugN1H03NOq1S8OZ60LBA%2FsqsqFgK%2FdbrXdaXc6s7ZGX7bYbhmjpgzI4hKHYLAWdLIHpCRAE5u4LN0GHIX8RX55iKfJni8jeJLkof%2Fg%2B5Bc4i7AbQg%2F4FNkMrmEXkCQlCCx4ydbJoG%2BZylzXDHuhO2ABNKgYA1Nzeqaj272BCYDOIJxTi%2BEbSrxtgtmtXUHdyp1U68KDBq3aThNNMtfe%2BhQu42B%2FF4SJBRgWLb48Lz7J8nMwyWxEL776cOb83q9SDJdLApdJXL5YHTZBPK8ddPIM%2FvwtsTWY5hzyIIxzFh7gKn%2BB2LqK1b0i5lH5rQIJKP9J5F9%2B4ncxkOvshq0Nv8L1SfvO5Zm7Kb%2BSNf3eYFyl1VDttyZEVb%2BEEcvhzVqvQlRljQ2Lqs8ff3wdf%2F7vdW%2BxfiTzKXup%2Fl3SV6mbACZWclwwXSbiv9eJvgqfV%2FXEyRZ9h3n7pUx0wGVzdIBlcq%2FaAFfp2g5XtXKT3rrob46fwiNg1fYIyP4ceQVbJSCjZBskWh5v4Q3%2B9VSOMURi3xxjF4K4htlv3zoa64Ry93vjan68pgLTzLEfxUaC8jlCombBCiz5GRjGJcmg75C40EInSY%2Fk%2FJNUawsFgoHfIbGRjXj9BaUW%2FnkFGvmLIwvei7jX3zJA4omya79lyZvDePKy4%2Bv6s3iXPxSsm3poA2PW4jEzQMI%2F%2FFcEqgylID%2BGjV6cicIJwz%2Bo64Ig2ElK4aNCXuTVgbGnHFaKguPuFRCw2PdIOCFlEAZ7BU8M%2F7xJuGJ6lrn%2Fe4V5Ci4XFTbfEHFRyK1uukKizCCFgVAlQsSvwFNeECSbZIVJgnh%2Fyc9vhGteswSF8Cw1SyqaRq6I3u7w6qUpM4m5zdjJa4ydpjL5KR9owj4hBER4Tprnn%2BORU0Mh5y%2FQwEcYJuZgO8GrXxF6pA%2B0bt8qoyh9cEbb5HJL8WqnsU0qij5UT5xsZ%2Bo%2B22Smvc46MU9lnZyY70qmi6pUeATOabtU27XJuPICHRVbF66LghAenmARfcAHsUBrTpTdTPPJRFGUss3hYx92GrD2j4kNOFystqriRBMFJ6pZuEQG7R2QobRPKpkKeokKFSrpzVNBSysryiKDUSJDRanHN0eGwWBHJsnmhnLtpooAxzdHBnW3UIl0OlglOlT4G98eHaydzwhWfT3nrHTolehQEQn25uigKfpuSqFcMvRLZKjIkXtzZDDTTYZ0I0Q2Yh2UyFCRPPT2yNDb%2FsS8pQzkkiHlxqIBV5EV9OYIoVk7n5cyZKtptcKUfhe2dH8HuBp92ZSQEqHdqENwbwzC4WAF2dVsptB2QcjzUESslvhSFAzjx5%2Bu2Dm%2FufOrYuf8JBHdYv3azDc0D7vcv5i0wtQ1VLtNa8jFaO5kuOhVsdBGBeudqup59QyW7fl0Jb9pwaib%2BtlU1Is88wTWdc3vkTItDRzq7STcyw4cqp7Bsi1TFaD35jhD6%2B1whqpKxwxSSh%2BcHjNUfVy7%2BkLtX8zQFGY4xTepm8IMxg5aH1gVu5LSMYNWYUy9D8xQ%2BgxHBX1kggbttbBBOwCo5cIGyZv2XBRhTAuXf2CDXn3CDifO%2BP8%3D"></iframe>
 
 
 
