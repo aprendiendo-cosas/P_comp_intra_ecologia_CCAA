@@ -98,7 +98,7 @@ La siguiente figura muestra una versión simplificada del flujo de trabajo que s
 
 ![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/imagenes/flujograma_pinares_simplificado.png)
 
-El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/presentaciones/flujograma_pinares_repoblacion.drawio) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
+El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/presentaciones/flujograma_pinares_repoblacion.drawio.zip) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
 
 
 
@@ -114,11 +114,11 @@ Así que el primer paso es identificar las variables ambientales y los criterios
 ## Material de partida.
 Aunque se irán detallando y describiendo a lo largo del guión, aquí tienes la lista del material que necesitas para ejecutar esta práctica:
 
-+ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/fjbonet/teaching_intraspecific_competence/raw/master/input/MUCVA_25_multi_snevada.zip)
++ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/MUCVA_25_multi_snevada.zip)
 
-+ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pines\_23030.tif_](https://github.com/fjbonet/teaching_intraspecific_competence/raw/master/input/TCD_pines_23030.tif)
++ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/TCD_pinares_23030.tif)
 
-+ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pines\_23030.tif_](https://github.com/fjbonet/teaching_intraspecific_competence/raw/master/input/cti_pines_23030.tif)
++ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/cti_pinares_23030.tif)
 
 + Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pine\_plantations\_23030.tif_](https://github.com/fjbonet/teaching_intraspecific_competence/raw/master/input/pine_plantations_23030.tif)
 
