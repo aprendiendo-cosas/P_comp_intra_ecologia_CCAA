@@ -120,16 +120,16 @@ Aunque se irán detallando y describiendo a lo largo del guión, aquí tienes la
 
 + Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/cti_pinares_23030.tif)
 
-+ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pine\_plantations\_23030.tif_](https://github.com/fjbonet/teaching_intraspecific_competence/raw/master/input/pine_plantations_23030.tif)
++ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pinares\_repoblacion\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/pinares_repoblacion_23030.tif)
 
   
 
 ## Secuencia de acciones
 
-Las siguientes acciones se describen con la misma numeración que se representa gráficamente en [este](https://drive.google.com/file/d/1--LHT3pof0kQduS_CRljo4is__Eeo3EE/view?usp=sharing) esquema. 
+Las siguientes acciones se describen con la misma numeración que se muestra en el flujo de trabajo descrito más arriba.
 
 ### Creación del mapa de distancia a formaciones de vegetación natural. 
-Para generar este mapa necesitamos contar con la distribución de los pinares de repoblación y con la de las formaciones vegetales que actuarán como donadoras de propágulos. Obtendremos ambos mapas a partir del mapa de usos y coberturas vegetales de Andalucía, generado por la [REDIAM](http://www.juntadeandalucia.es/medioambiente/site/rediam). En [este](https://descargasrediam.cica.es/repo/s/RUR?path=%2F01_CARACTERIZACION_TERRITORIO%2F06_USOS_COBERTURAS%2F02_MUCVA_25000%2FMUCVA25_Multitemporal) enlace puedes descargar el mapa completo (Andalucía). Y [aquí](https://www.youtube.com/watch?v=RNQ7qwG5UDQ) tienes un video en el que te cuento cómo está estructurado. Para esta práctica mejor usa [este](https://github.com/fjbonet/teaching_intraspecific_competence/raw/master/input/MUCVA_25_multi_snevada.zip) fichero de formas.
+Para generar este mapa necesitamos contar con la distribución de los pinares de repoblación y con la de las formaciones vegetales que actuarán como donadoras de propágulos. Obtendremos ambos mapas a partir del mapa de usos y coberturas vegetales de Andalucía, generado por la [REDIAM](http://www.juntadeandalucia.es/medioambiente/site/rediam). En [este](https://descargasrediam.cica.es/repo/s/RUR?path=%2F01_CARACTERIZACION_TERRITORIO%2F06_USOS_COBERTURAS%2F02_MUCVA_25000%2FMUCVA25_Multitemporal) enlace puedes descargar el mapa completo (Andalucía). Y [aquí](https://www.youtube.com/watch?v=RNQ7qwG5UDQ) tienes un video en el que te cuento cómo está estructurado. Para esta práctica mejor usa [este](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/MUCVA_25_multi_snevada.zip) fichero de formas.
 
 De manera resumida haremos lo siguiente: Crearemos un campo nuevo en el mapa de usos y coberturas anterior y asignaremos los valores 1 a todos los polígonos que tengan pinares, mientras que pondremos el valor 2 a todos los que sean considerados como fuentes de semillas. 
 
