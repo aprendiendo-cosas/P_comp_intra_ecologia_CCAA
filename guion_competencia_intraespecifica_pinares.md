@@ -197,7 +197,7 @@ Vamos con el paso a paso:
 ![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/imagenes/funcion_pertenencia_inversa.png)
 
 -  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_dist\_nat.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
--  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster:
+-  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster: **ojo: los valores que hay aquí pueden cambiar en tu capa. Así que revisa los metadatos y pon los valores máximos y mínimos adaptados a tu situación.**
 
 ```python  
   1/(100-7300.68505859375)*"dist_nat@1"-
@@ -223,7 +223,7 @@ Vamos con el paso a paso:
 -  Asumiremos que la relación entre la variable (humedad potencial) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el esquema usado para el mapa de distancia.
 
 -  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_cti\_pinares.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
--  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster:
+-  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster: **ojo: los valores que hay aquí pueden cambiar en tu capa. Así que revisa los metadatos y pon los valores máximos y mínimos adaptados a tu situación.**
 
 ```python  
   1/(-0.370579987764359-0.329879999160767)*"cti_pinares_23030@1"-
@@ -276,7 +276,7 @@ Para implementar esta operación en un SIG, usamos dos operadores matemáticos m
 + Valor **máximo** entre dos capas: es el equivalente al operador **O**. Si en un píxel hay valores altos de aptitud en una capa y bajos en otra, el resultado será alto, puesto que estamos eligiendo el máximo de ambos. Si la aptitud es alta en los dos casos, también seleccionaremos un valor alto. Es decir, se trata de un operador poco restrictivo.
 + Valor **mínimo** entre dos capas: es el equivalente al operador **Y**. Si en un píxel hay valores altos de aptitud en una capa y bajos en otra, el resultado será bajo, puesto que estamos eligiendo el mínimo de ambos. Solo si la aptitud es alta en los dos casos, seleccionaremos un valor alto. Es decir, se trata de un operador poco restrictivo.
 
-Para aplicar estos operadores a nuestras capas, puedes usar el comando [mosaic de SAGA](https://gis.stackexchange.com/questions/150312/combining-multiple-overlapping-rasters-retain-maximum-value). Este comando está disponible en QGIS. No es obligatorio hacer esto, pero quién lo haga tendrá una puntuación mayor.
+Para aplicar estos operadores a nuestras capas, puedes usar el comando [mosaic de SAGA](https://gis.stackexchange.com/questions/150312/combining-multiple-overlapping-rasters-retain-maximum-value). Este comando está disponible en QGIS. 
 
 Una vez que obtengas la capa final usando estos operadores lógicos, tendrás que reclasificar el resultado siguiendo las instrucciones del paso **12**.
 
