@@ -129,7 +129,7 @@ Aunque se irán detallando y describiendo a lo largo del guión, aquí tienes la
 Las siguientes acciones se describen con la misma numeración que se muestra en el flujo de trabajo descrito más arriba.
 
 ### Creación del mapa de distancia a formaciones de vegetación natural. 
-Para generar este mapa necesitamos contar con la distribución de los pinares de repoblación y con la de las formaciones vegetales que actuarán como donadoras de propágulos. Obtendremos ambos mapas a partir del mapa de usos y coberturas vegetales de Andalucía, generado por la [REDIAM](http://www.juntadeandalucia.es/medioambiente/site/rediam). En [este](https://descargasrediam.cica.es/repo/s/RUR?path=%2F01_CARACTERIZACION_TERRITORIO%2F06_USOS_COBERTURAS%2F02_MUCVA_25000%2FMUCVA25_Multitemporal) enlace puedes descargar el mapa completo (Andalucía). Y [aquí](https://www.youtube.com/watch?v=RNQ7qwG5UDQ) tienes un video en el que te cuento cómo está estructurado. Para esta práctica mejor usa [este](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/MUCVA_25_multi_snevada.zip) fichero de formas.
+Para generar este mapa necesitamos contar con la distribución de los pinares de repoblación y con la de las formaciones vegetales que actuarán como donadoras de propágulos. Obtendremos ambos mapas a partir del mapa de usos y coberturas vegetales de Andalucía, generado por la [REDIAM](http://www.juntadeandalucia.es/medioambiente/site/rediam). En [este](https://descargasrediam.cica.es/repo/s/RUR?path=%2F01_CARACTERIZACION_TERRITORIO%2F06_USOS_COBERTURAS%2F02_MUCVA_25000%2FMUCVA25_Multitemporal) enlace puedes descargar el mapa completo (Andalucía). Y [aquí](https://www.youtube.com/watch?v=RNQ7qwG5UDQ) tienes un video en el que te cuento cómo está estructurado. Para esta práctica mejor usa la capa que se muestra más arriba.
 
 De manera resumida haremos lo siguiente: Crearemos un campo nuevo en el mapa de usos y coberturas anterior y asignaremos los valores 1 a todos los polígonos que tengan pinares, mientras que pondremos el valor 2 a todos los que sean considerados como fuentes de semillas. 
 
@@ -167,8 +167,8 @@ Vamos con el paso a paso:
   - _output raster size units_: Georeferenced units
   - _Width/horizontal resolution_: 100m
   - _Height/horizontal resolution_: 100m
-  - _output extent_: Selecciona la capa _TCD\_pines\_23030.tif_ para que QGIS copie de la misma la extensión del raster resultante. 
-  - _output\_file_: _dist\_target.tif_. Recuerda guardar el archivo en un sito conocido por ti...
+  - _output extent_: Selecciona la capa _TCD\_pinares\_23030.tif_ para que QGIS copie de la misma la extensión del raster resultante. 
+  - _output\_file_: _dist\_target.tif_. Recuerda guardar el archivo en un sito conocido por ti.
 - **(5)** Creamos el mapa de distancia usando el algoritmo llamado _proximity raster_ (GDAL) en QGIS. Necesitamos añadir los siguientes parámetros:
   - _input\_layer_: _dist\_target.tif_
   - _band number_: 1
@@ -185,7 +185,7 @@ Vamos con el paso a paso:
     "/tu ruta/distancia1.tif"
 ```
 
-- **(6)** El mapa de distancias obtenido cubre toda la extensión de la zona de estudio. Pero a nosotros nos interesa conocer la distancia únicamente en los píxeles ocupados por pinares. Por eso, para borrar el resto, multiplicamos el mapa obtenido anteriormente (_distancia1.tif_) por el mapa que muestra la distribución de los pinares (pine\_plantations\_23030.tif). Para hacer esta operación usamos la calculadora de mapas. El raster resultante se llamará _dist\_nat.tif_
+- **(6)** El mapa de distancias obtenido cubre toda la extensión de la zona de estudio. Pero a nosotros nos interesa conocer la distancia únicamente en los píxeles ocupados por pinares. Por eso, para borrar el resto, multiplicamos el mapa obtenido anteriormente (_distancia1.tif_) por el mapa que muestra la distribución de los pinares (pinares\repoblacion\_23030.tif). Para hacer esta operación usamos la calculadora de mapas. El raster resultante se llamará _dist\_nat.tif_
 
 
 ### Creación del mapa aptitud desde el punto de vista de la distancia.
@@ -194,7 +194,7 @@ Vamos con el paso a paso:
 
 -  Asumiremos que la relación entre la variable (distancia) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el siguiente esquema:
 
-![imagen](https://raw.githubusercontent.com/fjbonet/teaching_intraspecific_competence/master/presentations_schemes/funcion_pertenencia_inversa.png)
+![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/imagenes/funcion_pertenencia_inversa.png)
 
 -  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_dist\_nat.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
 -  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster:
@@ -214,19 +214,19 @@ Vamos con el paso a paso:
 -  Aunque se trata de una división muy sencilla, incluyo abajo el esquema que aplicaríamos para generar la ecuación de la recta directa, en caso de que la capa original no tuviera valores de entre 0 y 100.
 
 
-![](https://raw.githubusercontent.com/fjbonet/teaching_intraspecific_competence/master/presentations_schemes/funcion_pertenencia_directa.png)
+![](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/imagenes/funcion_pertenencia_directa.png)
 
 ### Creación del mapa aptitud desde el punto de vista de la humedad del suelo. 
 
--  **(9)** La capa _cti\_pines.tif_ muestra la distribución de la humedad potencial del suelo (en función del grado de concavidad del territorio). Ahora hemos de convertir la distribución de esa variable en un mapa de aptitud. Para eso aplicamos el criterio: **a más valor de CTI menos aptitud**. Es decir, debemos usar una función de preferencia inversa. Debemos de transformar la leyenda del mapa de humedad del suelo para que asigne valores cercanos a 1 a los sitios más cóncavos y valores cercanos a 0 a los más convexos. 
+-  **(9)** La capa _cti\_pinares.tif_ muestra la distribución de la humedad potencial del suelo (en función del grado de concavidad del territorio). Ahora hemos de convertir la distribución de esa variable en un mapa de aptitud. Para eso aplicamos el criterio: **a más valor de CTI menos aptitud**. Es decir, debemos usar una función de preferencia inversa. Debemos de transformar la leyenda del mapa de humedad del suelo para que asigne valores cercanos a 1 a los sitios más cóncavos y valores cercanos a 0 a los más convexos. 
 
 -  Asumiremos que la relación entre la variable (humedad potencial) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el esquema usado para el mapa de distancia.
 
--  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_cti\_pines.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
+-  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_cti\_pinares.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
 -  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster:
 
 ```python  
-  1/(-0.370579987764359-0.329879999160767)*"cti_pines_23030@1"-
+  1/(-0.370579987764359-0.329879999160767)*"cti_pinares_23030@1"-
   (0.329879999160767/(-0.370579987764359-0.329879999160767))
  
 ```
@@ -282,4 +282,29 @@ Una vez que obtengas la capa final usando estos operadores lógicos, tendrás qu
 
 
 
+
+
+## Vídeos de las sesiones
+
+Abajo puedes ver las sesiones de los diferentes grupos medianos. Todos los vídeos están ocultos en youtube. Esto quiere decir que solo son accesibles si tienes el enlace.
+
+
+
++ **GM-1**:
+
+​        Sesión 1 (12/03/2021)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fF8OpEgYXNc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
+
+​        Sesión 2 (18/03/2021)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nfz46r7ThhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
++ **GM-2**:
+
+  Sesión 1 (12/03/2021)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/g5TBlkx_Nm8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+​     Sesión 2 (15/03/2021). **No se pudo realizar grabación de esta sesión**
 
