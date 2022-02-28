@@ -1,7 +1,7 @@
 # Guión de la práctica "Manejo de pinares de repoblación: un ejemplo de la importancia de la competencia intraespecífica"
 
 
-> + **_Versión_**: v.2020-2021
+> + **_Versión_**: v.2021-2022
 > + **_Asignatura (grado)_**: Ecología (CCAA)
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
 > + **Duración**: Dos sesiones de tres horas cada una.
@@ -9,7 +9,7 @@
 
 
 
-## Objetivos y contextualización ecológica
+## Objetivos 
 
 Esta práctica tiene los siguientes objetivos:
 
@@ -23,7 +23,11 @@ Esta práctica tiene los siguientes objetivos:
    +    Evocar el conocimiento previamente adquirido sobre sistemas de información geográfica.
    +    Aprender el funcionamiento de la técnica de Evaluación Multicriterio como herramienta para integrar información geográfica procedente de fuentes diversas.
 
-El abordaje de los objetivos anteriores se realizará a través del estudio y análisis de una pregunta concreta. Así pues, estas práctica sigue la técnica docente denominada "aprendizaje basado en problemas". Aprenderemos todo lo enumerado anteriormente mediante la resolución de una pregunta concreta que se formulará después de contextualizar ecológicamente el objeto de esta práctica: los pinares de repoblación. [Esta](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/presentaciones/generalidades_pinares_reboblacion_lowres.pdf) presentación muestra con detalle lo enumerado a continuación.
+
+
+## Contextualización ecológica
+
+El abordaje de los objetivos anteriores se realizará a través del estudio y análisis de una pregunta concreta. Así pues, esta práctica sigue la técnica docente denominada "aprendizaje basado en problemas". Aprenderemos todo lo enumerado anteriormente mediante la resolución de una pregunta concreta que se formulará después de contextualizar ecológicamente el objeto de esta práctica: los pinares de repoblación. [Esta](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/presentaciones/generalidades_pinares_reboblacion_lowres.pdf) presentación muestra con detalle lo enumerado a continuación.
 
 Los pinares de repoblación son masas forestales densas, monoespecíficas y coetáneas que se implantan en el territorio por una serie de razones:
 
@@ -66,13 +70,13 @@ Este mapa muestra la ubicación de Sierra Nevada. Los pinares de repoblación so
 
 ## Variables a utilizar en la práctica
 
-Según la contextualización ecológica que hemos visto más arriba, usaremos las siguientes variables como elementos clave para responder a la pregunta planteada.
+Para abordar la pregunta planteada más arriba es necesario tener en cuenta una serie de variables ambientales que se describen a continuación:
 
 ### **Densidad del pinar**
 
 La densidad del pinar es el principal factor a considerar, ya que esta variable es la que condiciona la intensidad de la competencia intraespecífica. Dado que nuestro objetivo es reducir dicha competencia, consideraremos que los sitios más adecuados para recibir tratamientos selvícola son aquellos que tienen mayor densidad. 
 
-Todo lo que vamos a trabajar en esta práctica tiene una componente espacial evidente. Así que trabajaremos con mapas. En este caso, el mapa de densidad procede de una imagen de satélite. Concretamente ha sido generada por una infraestructura de investigación denominada [Copernicus](https://www.copernicus.eu/en), que suministra multitud de información ambiental procedente de sensores remotos. Concretamente vamos a usar una imagen denominada [TCD](https://www.copernicus.eu/en) (Tree cover density), que muestra la densidad de árboles expresada en porcentaje. La imagen cubre buena parte de Europa, así que yo la he recortado y reproyectado para que se ajuste a lo que necesitamos. 
+Todo lo que vamos a trabajar en esta práctica tiene una componente espacial evidente. Así que trabajaremos con mapas. En este caso, el mapa de densidad procede de una imagen de satélite. Concretamente ha sido generada por una infraestructura de investigación denominada [Copernicus](https://www.copernicus.eu/en), que suministra multitud de información ambiental procedente de sensores remotos. Concretamente vamos a usar una imagen denominada [TCD](https://land.copernicus.eu/pan-european/high-resolution-layers/forests/tree-cover-density/status-maps/tree-cover-density-2018) (Tree cover density), que muestra la densidad de árboles expresada en porcentaje. La imagen cubre buena parte de Europa, así que yo la he recortado y reproyectado para que se ajuste a lo que necesitamos. 
 
 La variable "densidad del pinar" ha de ser transformada en un criterio espacializable. En este caso asumimos que **a más densidad mayor idoneidad para recibir tratamientos forestales**. Es decir, hay una relación **directa** entre la distribución de la variable (densidad) y el criterio (aptitud desde el punto de vista de la densidad). Dado que la densidad se expresa en porcentaje (de 0 a 100%), es muy fácil transformarla en un mapa de aptitud desde el punto de vista de la densidad. Lo veremos más adelante.
 
@@ -80,7 +84,7 @@ La variable "densidad del pinar" ha de ser transformada en un criterio espaciali
 
 ### **Distancia a manchas donadoras de semillas**
 
-El proceso mediante el cual los pinares de repoblación son "invadidos" por vegetación natural depende en buena medida de la disponibilidad de propágulos de otras especies. Hay varios artículos que justifican esta afirmación ([1](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/08-1656.1), [2](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/12-0459.1)). Un pinar que esté lejos de una mancha de vegetación natural que suministre semillas, será invadido con menor probabilidad. Es decir, la distancia de cada punto del territorio ocupado por pinares a las manchas de vegetación natural más cercana, es importante para nuestro objetivo. En este caso la variable es "distancia de cada pinar a la mancha de vegetación natural más cercana". Su transformación a criterio implica tener en cuenta que **cuanto más distancia haya, menos adecuado será un punto del territorio para albergar tratamientos selvícolas**. Es decir, en este caso, la transformación de variable a criterio requiere usar una función invertida (a valores más altos de la variable corresponden valores más bajos de idoneidad o aptidud).
+El proceso mediante el cual los pinares de repoblación son "invadidos" por vegetación natural depende en buena medida de la disponibilidad de propágulos de otras especies. Hay varios trabajos que justifican esta afirmación ([1](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/08-1656.1), [2](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1890/12-0459.1)). Un pinar que esté lejos de una mancha de vegetación natural que suministre semillas, será invadido con menor probabilidad. Es decir, la distancia de cada punto del territorio ocupado por pinares a las manchas de vegetación natural más cercana, es importante para nuestro objetivo. En este caso la variable es "distancia de cada pinar a la mancha de vegetación natural más cercana". Su transformación a criterio implica tener en cuenta que **cuanto más distancia haya, menos adecuado será un punto del territorio para albergar tratamientos selvícolas**. Es decir, en este caso, la transformación de variable a criterio requiere usar una función invertida (a valores más altos de la variable corresponden valores más bajos de idoneidad o aptidud).
 
 Como veremos en las siguientes secciones, obtendremos el mapa de distancias a partir de un mapa de usos y coberturas vegetales del suelo. 
 
@@ -94,11 +98,11 @@ Las plantas toman del suelo el agua que necesitan para vivir. Por ello es muy im
 
 ## Flujo de trabajo general
 
-La siguiente figura muestra una versión simplificada del flujo de trabajo que seguiremos durante el desarrollo de la actividad. Un flujo de trabajo es una representación gráfica de una serie de procedimientos ordenados secuencialmente y que van encaminados a lograr un objetivo concreto. Esta primera versión del flujo de trabajo 
+La siguiente figura muestra una versión simplificada del flujo de trabajo que seguiremos durante el desarrollo de la actividad. Un flujo de trabajo es una representación gráfica de una serie de procedimientos ordenados secuencialmente y que van encaminados a lograr un objetivo concreto. Esta es nuestra primera versión del flujo de trabajo 
 
-![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/imagenes/flujograma_pinares_simplificado.png)
+![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/imagenes/flujograma_pinares_simplificado.png)
 
-El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/presentaciones/flujograma_pinares_repoblacion.drawio.zip) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
+El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/presentaciones/flujograma_pinares_repoblacion.drawio.zip) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
 
 
 
@@ -114,13 +118,13 @@ Así que el primer paso es identificar las variables ambientales y los criterios
 ## Material de partida.
 Aunque se irán detallando y describiendo a lo largo del guión, aquí tienes la lista del material que necesitas para ejecutar esta práctica:
 
-+ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/geoinfo/MUCVA_25_multi_snevada.zip)
++ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/geoinfo/MUCVA_25_multi_snevada.zip)
 
-+ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/geoinfo/TCD_pinares_23030.tif)
++ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/geoinfo/TCD_pinares_23030.tif)
 
-+ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/geoinfo/cti_pinares_23030.tif)
++ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/geoinfo/cti_pinares_23030.tif)
 
-+ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pinares\_repoblacion\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/geoinfo/pinares_repoblacion_23030.tif)
++ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pinares\_repoblacion\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/geoinfo/pinares_repoblacion_23030.tif)
 
   
 
@@ -194,7 +198,7 @@ Vamos con el paso a paso:
 
 -  Asumiremos que la relación entre la variable (distancia) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el siguiente esquema:
 
-![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/imagenes/funcion_pertenencia_inversa.png)
+![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/imagenes/funcion_pertenencia_inversa.png)
 
 -  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_dist\_nat.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
 -  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster: **ojo: los valores que hay aquí pueden cambiar en tu capa. Así que revisa los metadatos y pon los valores máximos y mínimos adaptados a tu situación.**
@@ -214,7 +218,7 @@ Vamos con el paso a paso:
 -  Aunque se trata de una división muy sencilla, incluyo abajo el esquema que aplicaríamos para generar la ecuación de la recta directa, en caso de que la capa original no tuviera valores de entre 0 y 100.
 
 
-![](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2020-2021/imagenes/funcion_pertenencia_directa.png)
+![](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021-2022/imagenes/funcion_pertenencia_directa.png)
 
 ### Creación del mapa aptitud desde el punto de vista de la humedad del suelo. 
 
@@ -262,49 +266,37 @@ El análisis multicriterio es una técnica muy sencilla que permite conciliar en
     - _reclassified raster_ (capa de salida): _apt\_final\_re.tif_
 
 
-### Integración de los tres criterios: uso de operadores lógicos.
 
-**(13)** Esta segunda forma de integrar los criterios es un _bonus_. No es obligatorio trabajar con ella durante la práctica. Los estudiantes que lleguen hasta aquí tendrán puntuación extra. Usamos esta técnica para evitar la compensación de criterios que comentábamos más arriba. 
+## Vídeo de la práctica
 
-En este caso usaremos operadores lógicos para integrar las tres capas. Consideraremos que un lugar es adecuado para satisfaer nuestros objetivos si cumple un criterio específico y una combinación de los otros dos. Es decir, pondremos como criterio fundamental que los lugares adecuados tengan una **alta densidad de pinos**. Si no se cumple este criterio, nunca se podrá obtener un valor alto al final del proceso de integración de las variables. Los otros dos criterios serán optativos entre sí. Es decir, seleccionaremos como lugares adecuados aquellos que **o bien están cerca de una mancha de vegetación natural, o bien tienen suelos potencialmente húmedos**. Es decir, en conjunto aplicaremos los siguientes criterios concatenados: Un lugar es considerado como adecuado si:
-
-+ Tiene una alta densidad de pinos **Y**:
-+ Está cerca de una mancha de vegetación natural **O** tiene suelos potencialmente húmedos. 
-
-Para implementar esta operación en un SIG, usamos dos operadores matemáticos muy sencillos:
-
-+ Valor **máximo** entre dos capas: es el equivalente al operador **O**. Si en un píxel hay valores altos de aptitud en una capa y bajos en otra, el resultado será alto, puesto que estamos eligiendo el máximo de ambos. Si la aptitud es alta en los dos casos, también seleccionaremos un valor alto. Es decir, se trata de un operador poco restrictivo.
-+ Valor **mínimo** entre dos capas: es el equivalente al operador **Y**. Si en un píxel hay valores altos de aptitud en una capa y bajos en otra, el resultado será bajo, puesto que estamos eligiendo el mínimo de ambos. Solo si la aptitud es alta en los dos casos, seleccionaremos un valor alto. Es decir, se trata de un operador poco restrictivo.
-
-Para aplicar estos operadores a nuestras capas, puedes usar el comando [mosaic de SAGA](https://gis.stackexchange.com/questions/150312/combining-multiple-overlapping-rasters-retain-maximum-value). Este comando está disponible en QGIS. 
-
-Una vez que obtengas la capa final usando estos operadores lógicos, tendrás que reclasificar el resultado siguiendo las instrucciones del paso **12**.
+El siguiente video muestra (en inglés) la secuencia de acciones necesarias para completar la práctica. 
 
 
 
-
-
-## Vídeos de las sesiones
-
-Abajo puedes ver las sesiones de los diferentes grupos medianos. Todos los vídeos están ocultos en youtube. Esto quiere decir que solo son accesibles si tienes el enlace.
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4UpFxyFdSs8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 
-+ **GM-1**:
+## Material a entregar
 
-​        Sesión 1 (12/03/2021)
+Dado que esta práctica tiene dos sesiones, en el último día deberás entregar un breve informe que contenga la siguiente información:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fF8OpEgYXNc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  
++ Lista ordenada de los pasos que has ido ejecutando con el ordenador para obtener el mapa final con los lugares más adecuados para reducir la competencia intraespecífica. Entre estos pasos debe de estar la combinación de pesos que consideres más adecuada para satisfacer nuestros objetivos. Deberás ir completando esta parte del informe conforme vayamos trabajando juntos en clase. Puedes describir cada paso como quieras. Te sugiero algo así:
+  + Paso 1: [nombre del paso]
+    + Nombre de la fuente de datos de entrada: [nombre_fuente]
+    + Procesamiento realizado: [nombre_procesamiento],[software], [parámetros]
+    + Nombre de la fuente de datos de salida: [nombre_resultado]
++ Resultado obtenido. Deberás incluir en el informe un mapa de una zona que elijas de Sierra Nevada. Además, deberás describir dicha zona usando términos ecológicos relacionados con la competencia intraespecífica. Por ejemplo: "la zona seleccionada se caracteriza por estar en una ladera de orientación norte. Hay un pinar de repoblación denso que no tiene cerca ninguna mancha donadora de semillas. Sin embargo, el suelo parece adecuado para almacenar agua, por lo que se ha considerado que es un lugar adecuado para realizar tratamientos forestales".
 
-​        Sesión 2 (18/03/2021)
+El informe se evaluará según la siguiente rúbrica. Sube el material a [esta](https://www.turnitin.com/t_submit.asp?r=84.2990743610219&svr=45&lang=es&aid=118332346) página de Turnitin.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nfz46r7ThhI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
 
-+ **GM-2**:
 
-  Sesión 1 (12/03/2021)
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/g5TBlkx_Nm8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-​     Sesión 2 (15/03/2021). **No se pudo realizar grabación de esta sesión**
+| Criterio de evaluación                                       | 0 puntos                             | 1 punto                                                      | 2 puntos                                                     | 3 puntos                                                     | 4 puntos                                                     | 5 puntos                                                     |
+| ------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| **Selección de variables**: Se refiere a si las variables elegidas para tu análisis se ajustan a la lógica del problema planteado. | No entrega nada o es incomprensible. | El conjunto de variables elegido no se alinea con el objetivo del trabajo. | No se tienen en cuenta los  grupos de variables propuestas.  | Incluye todas las variables sin justificar la decisión.      | Excelente selección de variables.                            | Además de lo anterior, incorpora variables nuevas no propuestas inicialmente en el ejercicio. |
+| **Descripción de los procesos realizados**: Se refiere a lo bien que ha sido descrito el proceso que permite generar el resultado final. | No entrega nada o es incomprensible. | Es imposible repetir el proceso con la información suministrada. | Se entiende el proceso y se podrían repetir algunas partes del mismo, pero el conjunto no contiene la secuencia completa. | Buena descripción. Sería posible reproduccir el trabajo realizado. | Excelente descripción del flujo de trabajo.                  | Además, la presentación es brillante.                        |
+| **Descripción de la zona seleccionada**: Este criterio evalúa en qué medida describes bien la zona elegida después del trabajo. | No entrega nada o es incomprensible. | La descripción no contiene menciones a la competencia ni a ningún concepto ecológico relevante. | Los conceptos teóricos en los que se basa el ejercicio aparecen tangencialmente. | Incorpora adecuadamente la competencia intraespecífica y las demás variables consideradas. | Además de lo anterior, mencionas adecuadamente las relaciones de la ecología con aspectos socioeconómicos. | Excelente integración de marcos conceptuales diferentes. Además de los requeridos has incluido otros. |
+| **Legibilidad:** hace referencia a lo bien escrito que está el texto y a su legibilidad | No entrega nada o es incomprensible. | Apenas entiendo lo que has escrito                           | He tenido que reinterpretar casi cada frase para entenderlo  | Se entiende bien todo, pero el texto no es fluido            | Muy buena redacción. La lectura fluye fácilmente, cual novela. | Impecable estilo de escritura.                               |
 
