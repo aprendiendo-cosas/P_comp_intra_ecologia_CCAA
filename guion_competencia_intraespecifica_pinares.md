@@ -1,10 +1,10 @@
 # Guión de la práctica "Manejo de pinares de repoblación: un ejemplo de la importancia de la competencia intraespecífica"
 
 
-> + **_Versión_**: v.2021-2022
+> + **_Versión_**: 2022-2023
 > + **_Asignatura (grado)_**: Ecología (CCAA)
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
-> + **Duración**: Dos sesiones de tres horas cada una.
+> + **Duración**: Dos sesiones de dos horas cada una.
 
 
 
@@ -288,7 +288,11 @@ Dado que esta práctica tiene dos sesiones, en el último día deberás entregar
     + Nombre de la fuente de datos de salida: [nombre_resultado]
 + Resultado obtenido. Deberás incluir en el informe un mapa de una zona que elijas de Sierra Nevada. Además, deberás describir dicha zona usando términos ecológicos relacionados con la competencia intraespecífica. Por ejemplo: "la zona seleccionada se caracteriza por estar en una ladera de orientación norte. Hay un pinar de repoblación denso que no tiene cerca ninguna mancha donadora de semillas. Sin embargo, el suelo parece adecuado para almacenar agua, por lo que se ha considerado que es un lugar adecuado para realizar tratamientos forestales".
 
-El informe se evaluará según la siguiente rúbrica. Sube el material a [esta](https://www.turnitin.com/t_submit.asp?r=84.2990743610219&svr=45&lang=es&aid=118332346) página de Turnitin.
+El informe se evaluará según la siguiente rúbrica. Sube el material a [esta](https://www.turnitin.com/t_submit.asp?r=98.3960297181806&svr=39&lang=es&aid=132557557) página de Turnitin.
+
+
+
+![rubrica]()
 
   
 
@@ -302,22 +306,3 @@ El informe se evaluará según la siguiente rúbrica. Sube el material a [esta](
 
 
 
-## Evaluación de la sesión según los estudiantes
-
-Aquí puedes ver los resultados que, por ahora, arroja [esta](https://docs.google.com/forms/d/e/1FAIpQLScbCKaNkzzjV5bH0yek41FO-KS7LtLhT_ilITS_ZR0Z2XJyCA/viewform?usp=sf_link) encuesta sobre grado de satisfacción de los objetivos planteados. Por favor, rellénala si no lo has hecho ya. Se tardan 10 segundos y sus resultados son de gran utilidad para mejorar los contenidos cada año. Gracias.
-
-
-
-
-<img src="https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/imagenes/cumplimiento_objetivos.png" alt="image" style="zoom:50%;" />
-
-<img src="https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/imagenes/desempenio_profesor.png" alt="image" style="zoom:50%;" />
-
-
-
-Además, algunos estudiantes hicieron los siguientes comentarios:
-
-+ Creo que  no se ha explicado en profundidad el funcionamiento de las herramientas que necesitábamos para trabajar en esta práctica, y por eso hemos ido tan atrasados.
-+ Esta todo bien
-+ Esta todo bien
-+ He puntuado por un 4 no por la parte del profesor, sino porque fue una practica de la que, aunque aprendi mucho y en ese sentido pienso que se cumplio el objetivo, por un problema con el informe de practica (no lo entregue) considero que no cumpli todos los objetivos.
