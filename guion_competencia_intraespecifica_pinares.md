@@ -292,7 +292,7 @@ El informe se evaluará según la siguiente rúbrica. Sube el material a [esta](
 
 
 
-![rubrica]()
+![rubrica](https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/main/imagenes/rubrica.png)
 
   
 
