@@ -6,6 +6,7 @@
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
 > + **Duración**: Dos sesiones de dos horas cada una.
 
+![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/main/imagenes/portada.png)
 
 
 
