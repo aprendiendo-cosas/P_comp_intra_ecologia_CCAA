@@ -142,6 +142,7 @@ El algoritmo de QGIS que permite calcular el mapa de distancias necesita un rast
 
 Vamos con el paso a paso:
 
+- **(0)** Descarga el mapa de usos y coberturas vegetales de Sierra Nevada [aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/MUCVA_25_multi_snevada.zip). 
 - **(1)** Crear un campo nuevo llamado _dist\_targe_ en la tabla de atributos del shapefile llamado _MUCVA\_multitemporal.shp_. Debe de ser un campo numérico.
 - **(2)** Seleccionar los polígonos que tengan pinos. Para ello nos fijamos en el campo _DES\_UC07_, que contiene la descripción del uso del suelo en cada polígono en 2007. Veremos que hay una leyenda con muchos tipos. Buscamos aquellos que correspondan con bosques densos de coníferas. Y ejecutamos la siguiente consulta de selección con QGIS. Recuerda que hay que poner el nombre del cada campo cada vez que queremos seleccionar un tipo de uso. Y que el operador de unión es _OR_.
 
