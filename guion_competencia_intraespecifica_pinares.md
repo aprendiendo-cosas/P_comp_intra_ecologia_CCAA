@@ -116,7 +116,7 @@ Así que el primer paso es identificar las variables ambientales y los criterios
 
 
 
-## Material de partida.
+## Material de partida
 Aunque se irán detallando y describiendo a lo largo del guión, aquí tienes la lista del material que necesitas para ejecutar esta práctica:
 
 + Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/geoinfo/MUCVA_25_multi_snevada.zip)
@@ -152,8 +152,8 @@ Vamos con el paso a paso:
  "DES_UC07" = 'MATORRAL DENSO ARBOLADO: CONIFERAS DENSAS' 
 
 ```
-- **(2)** Ahora abrimos la tabla de atributos de la capa y hacemos que todos los registros seleccionados adquieran el valor de 1 en el campo _dist\_targe_. No olvides de guardar los cambios.
-- **(3)** Repetimos la misma operación anterior, pero seleccionando los polígonos que tengan la palabra _Quercus_ o _quercínea_ en el campo _DES\_UC07_. 
+- **(3)** Ahora abrimos la tabla de atributos de la capa y hacemos que todos los registros seleccionados adquieran el valor de 1 en el campo _dist\_targe_. No olvides de guardar los cambios.
+- **(4)** Repetimos la misma operación anterior, pero seleccionando los polígonos que tengan la palabra _Quercus_ o _quercínea_ en el campo _DES\_UC07_. 
 
 ```r
 "DES_UC07" = 'FOR. ARBOL. DENSA: QUERCINEAS' or 
@@ -166,8 +166,9 @@ Vamos con el paso a paso:
 "DES_UC07"  = 'MATORRAL DISP. ARBOLADO: QUERCINEAS. DISPERSO'
 
 ```
-- **(3)** Al igual que antes, haz que estos polígonos seleccionados tomen el valor 2 en el campo _dist\_targe_. Guarda los cambios.
-- **(4)** Ahora rasterizamos el fichero de formas anterior con la opción _rasterizar_ de QGIS (menú raster -> conversion -> rasterizar). Aplicamos los siguientes valores a los parámetros necesarios:
+- **(5)** Al igual que antes, haz que estos polígonos seleccionados tomen el valor 2 en el campo _dist\_targe_. Guarda los cambios.
+- **(6)** Ahora rasterizamos el fichero de formas anterior con la opción _rasterizar_ de QGIS (menú raster -> conversion -> rasterizar). Aplicamos los siguientes valores a los parámetros necesarios:
+  
   - _input layer_: _MUCVA\_25\_multi\_snevada.shp_
   - _field to use for a burn-in value_: _dist\_targe_
   - _output raster size units_: Georeferenced units
@@ -175,13 +176,14 @@ Vamos con el paso a paso:
   - _Height/horizontal resolution_: 100m
   - _output extent_: Selecciona la capa _TCD\_pinares\_23030.tif_ para que QGIS copie de la misma la extensión del raster resultante. 
   - _output\_file_: _dist\_target.tif_. Recuerda guardar el archivo en un sito conocido por ti.
-- **(5)** Creamos el mapa de distancia usando el algoritmo llamado _proximity raster_ (GDAL) en QGIS. Necesitamos añadir los siguientes parámetros:
+- **(7)** Creamos el mapa de distancia usando el algoritmo llamado _proximity raster_ (GDAL) en QGIS. Necesitamos añadir los siguientes parámetros:
+  
   - _input\_layer_: _dist\_target.tif_
   - _band number_: 1
   - _A list of pixel values in the source image to be considered..._: Aquí debemos indicar los valores de nuestro raster inicial que son considerados como "fuentes" de semillas. En nuestro caso es el valor 2.
   - _distance units_: Georeferenced units.
   - _proximity map_ (mapa de salida): _distancia1.tif_
-
+  
   O expresado en el lenguaje de QGIS:
 
 
@@ -191,12 +193,12 @@ Vamos con el paso a paso:
     "/tu ruta/distancia1.tif"
 ```
 
-- **(6)** El mapa de distancias obtenido cubre toda la extensión de la zona de estudio. Pero a nosotros nos interesa conocer la distancia únicamente en los píxeles ocupados por pinares. Por eso, para borrar el resto, multiplicamos el mapa obtenido anteriormente (_distancia1.tif_) por el mapa que muestra la distribución de los pinares (pinares\repoblacion\_23030.tif). Para hacer esta operación usamos la calculadora de mapas. El raster resultante se llamará _dist\_nat.tif_
+- **(8)** El mapa de distancias obtenido cubre toda la extensión de la zona de estudio. Pero a nosotros nos interesa conocer la distancia únicamente en los píxeles ocupados por pinares. Por eso, para borrar el resto, multiplicamos el mapa obtenido anteriormente (_distancia1.tif_) por el mapa que muestra la distribución de los pinares (pinares\repoblacion\_23030.tif). Para hacer esta operación usamos la calculadora de mapas. El raster resultante se llamará _dist\_nat.tif_
 
 
 ### Creación del mapa aptitud desde el punto de vista de la distancia.
 
--  **(7)** Ya tenemos el mapa de distancia de cada píxel de pinar a manchas donadoras de semillas. Ahora hemos de convertir la distribución de esa variable en un mapa de aptitud. Para eso aplicamos el criterio: **a más distancia menos aptitud**. Es decir, debemos usar una función de preferencia inversa. Debemos de transformar la leyenda del mapa obtenido para que asigne valores cercanos a 1 a las distancias más cortas y valores cercanos a 0 a las distancias más largas. 
+-  **(9)** Ya tenemos el mapa de distancia de cada píxel de pinar a manchas donadoras de semillas. Ahora hemos de convertir la distribución de esa variable en un mapa de aptitud. Para eso aplicamos el criterio: **a más distancia menos aptitud**. Es decir, debemos usar una función de preferencia inversa. Debemos de transformar la leyenda del mapa obtenido para que asigne valores cercanos a 1 a las distancias más cortas y valores cercanos a 0 a las distancias más largas. 
 
 -  Asumiremos que la relación entre la variable (distancia) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el siguiente esquema:
 
@@ -216,7 +218,7 @@ Vamos con el paso a paso:
 
 ### Creación del mapa aptitud desde el punto de vista de la densidad de los pinares. 
 
--  **(8)** El mapa de densidad del pinar está expresado en porcentaje. Y el criterio que vamos a seguir es que **a más densidad más aptitud** para nuestro objetivo (queremos intervenir para reducir la competencia intraespecífica). Así que, en este caso, es muy fácil transformar la variable en un mapa de aptitud: basta con dividir por 100. Hacemos eso en la calculadora raster de QGIS y le damos el nombre _apt\_densidad.tif_ a la capa resultante. 
+-  **(10)** El mapa de densidad del pinar está expresado en porcentaje. Y el criterio que vamos a seguir es que **a más densidad más aptitud** para nuestro objetivo (queremos intervenir para reducir la competencia intraespecífica). Así que, en este caso, es muy fácil transformar la variable en un mapa de aptitud: basta con dividir por 100. Hacemos eso en la calculadora raster de QGIS y le damos el nombre _apt\_densidad.tif_ a la capa resultante. 
 -  Aunque se trata de una división muy sencilla, incluyo abajo el esquema que aplicaríamos para generar la ecuación de la recta directa, en caso de que la capa original no tuviera valores de entre 0 y 100.
 
 
@@ -224,7 +226,7 @@ Vamos con el paso a paso:
 
 ### Creación del mapa aptitud desde el punto de vista de la humedad del suelo. 
 
--  **(9)** La capa _cti\_pinares.tif_ muestra la distribución de la humedad potencial del suelo (en función del grado de concavidad del territorio). Ahora hemos de convertir la distribución de esa variable en un mapa de aptitud. Para eso aplicamos el criterio: **a más valor de CTI menos aptitud**. Es decir, debemos usar una función de preferencia inversa. Debemos de transformar la leyenda del mapa de humedad del suelo para que asigne valores cercanos a 1 a los sitios más cóncavos y valores cercanos a 0 a los más convexos. 
+-  **(11)** La capa _cti\_pinares.tif_ muestra la distribución de la humedad potencial del suelo (en función del grado de concavidad del territorio). Ahora hemos de convertir la distribución de esa variable en un mapa de aptitud. Para eso aplicamos el criterio: **a más valor de CTI menos aptitud**. Es decir, debemos usar una función de preferencia inversa. Debemos de transformar la leyenda del mapa de humedad del suelo para que asigne valores cercanos a 1 a los sitios más cóncavos y valores cercanos a 0 a los más convexos. 
 
 -  Asumiremos que la relación entre la variable (humedad potencial) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el esquema usado para el mapa de distancia.
 
@@ -243,11 +245,11 @@ Vamos con el paso a paso:
 
 El análisis multicriterio es una técnica muy sencilla que permite conciliar en un mismo mapa criterios que pueden ser contradictorios. En nuestro ejemplo tenemos tres criterios y se trata de unificarlos en un único mapa que asigne un valor de aptitud global a cada punto ocupado por pinares de repoblación. Para agregar los tres criterios empezaremos asignando un peso a cada uno de ellos. La suma de los pesos ha de ser 1. El criterio que tenga más peso contribuirá en mayor medida al mapa final. Procedemos en dos pasos:
 
-- **(10)** Asignación de pesos a cada variable. Por ejemplo:
+- **(12)** Asignación de pesos a cada variable. Por ejemplo:
   - _apt\_densidad.tif_: 0.6
   - _apt\_cti.tif_:0.1
   - _apt\_distancia_:0.3
-- **(11)** Integración de las variables y sus pesos. El proceso se hace fácilmente con la calculadora de mapas. El resultado final es la suma del producto de cada criterio (capa _apt_) por su peso. Introducimos la siguiente ecuación en la calculadora raster:
+- **(13)** Integración de las variables y sus pesos. El proceso se hace fácilmente con la calculadora de mapas. El resultado final es la suma del producto de cada criterio (capa _apt_) por su peso. Introducimos la siguiente ecuación en la calculadora raster:
 
 ```python  
   ("apt_densidad@1"*0.6)+("apt_cti@1"*0.1)+("apt_distancia@1"*0.3)
@@ -255,7 +257,7 @@ El análisis multicriterio es una técnica muy sencilla que permite conciliar en
 ```
  - Llamamos _apt\_final.tif_ a la capa resultante.
  - Uno de los problemas del análisis multicriterio es que ocurre una compensación de criterios. Si una variable tiene un valor muy alto en un lugar determinado, puede que el resultado final en ese punto sea algo aunque su peso sea bajo. Esto puede hacer que lugares no adecuados sean etiquetados como sí adecuados. 
- - **(12)** El mapa resultante _apt\_final.tif_ tiene valores númericos que van de 0 a 1. A partir de este mapa debermos seleccionar aquellos píxeles que tengan una aptitud mayor. El resto los descartaremos porque no reunen los requisitos que hemos impuesto. Para hacer esta selección aplicaremos una operación muy común en análisis raster: [reclasificación](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#qgisreclassifybytable). Consiste en reducir la diversidad de valores de un raster asigando nuevos en función de un rango. Por ejemplo, asignaremos el valor de 1 a todos los píxeles que tengan una aptitud igual o mayor de 0.8. Para hacer esto, construimos una tabla de reclasificación.
+ - **(14)** El mapa resultante _apt\_final.tif_ tiene valores númericos que van de 0 a 1. A partir de este mapa debermos seleccionar aquellos píxeles que tengan una aptitud mayor. El resto los descartaremos porque no reunen los requisitos que hemos impuesto. Para hacer esta selección aplicaremos una operación muy común en análisis raster: [reclasificación](https://docs.qgis.org/3.4/en/docs/user_manual/processing_algs/qgis/rasteranalysis.html#qgisreclassifybytable). Consiste en reducir la diversidad de valores de un raster asigando nuevos en función de un rango. Por ejemplo, asignaremos el valor de 1 a todos los píxeles que tengan una aptitud igual o mayor de 0.8. Para hacer esto, construimos una tabla de reclasificación.
  - Buscamos el algoritmo "reclassify by table" en el buscador de procesos de QGIS. Añadimos los siguientes parámetros:
    - _raster layer_: _apt\_final.tif_
    - _reclassification table_: Abrimos la tabla y añadimos las siguientes filas:
@@ -288,6 +290,8 @@ Dado que esta práctica tiene dos sesiones, en el último día deberás entregar
     + Nombre de la fuente de datos de entrada: [nombre_fuente]
     + Procesamiento realizado: [nombre_procesamiento],[software], [parámetros]
     + Nombre de la fuente de datos de salida: [nombre_resultado]
+  
+  Esto es solo una sugerencia. Hay dos razones para que prefiera esta forma: a) así describimos los procesos de forma más "pura", sin detallar cómo se hace con una herramienta concreta. Esto incide en el núcleo de los análisis. b) la idea final es que los procesos documentados por humanos sean ejecutables en algún momento por ordenadores. No obstante, entiendo que para vosotros puede ser difícil hacerlo así por primera vez. Así que, os sugiero que documentéis los pasos como mejor os parezca, pero que al menos en una ocasión uséis el método que os propongo.
 + Resultado obtenido. Deberás incluir en el informe un mapa de una zona que elijas de Sierra Nevada. Además, deberás describir dicha zona usando términos ecológicos relacionados con la competencia intraespecífica. Por ejemplo: "la zona seleccionada se caracteriza por estar en una ladera de orientación norte. Hay un pinar de repoblación denso que no tiene cerca ninguna mancha donadora de semillas. Sin embargo, el suelo parece adecuado para almacenar agua, por lo que se ha considerado que es un lugar adecuado para realizar tratamientos forestales".
 
 Lo ideal sería que fueras construyendo el informe conforme vas trabajando con los datos. Piensa que es una especie de guión que tú elaboras por si en alguna ocasión tienes que repetir el trabajo. Sé que no tendrás mucho tiempo para trabajar el documento, así que no te preocupes demasiado por el formato ni por la maquetación. Lo importante son los criterios que se muestran en la siguiente rúbrica. Sube el informe en formato procesador de textos a [esta](https://www.turnitin.com/t_submit.asp?r=98.3960297181806&svr=39&lang=es&aid=132557557) página de Turnitin.
