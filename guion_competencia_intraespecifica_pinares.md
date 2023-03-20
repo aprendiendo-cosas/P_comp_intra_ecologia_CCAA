@@ -4,9 +4,9 @@
 > + **_Versión_**: 2022-2023
 > + **_Asignatura (grado)_**: Ecología (CCAA)
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
-> + **Duración**: Dos sesiones de dos horas cada una.
+> + **Duración**: Tres sesiones de dos horas cada una.
 
-![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/main/imagenes/portada.png)
+![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/2022-2023/imagenes/portada.png)
 
 
 
@@ -28,7 +28,7 @@ Esta práctica tiene los siguientes objetivos:
 
 ## Contextualización ecológica
 
-El abordaje de los objetivos anteriores se realizará a través del estudio y análisis de una pregunta concreta. Así pues, esta práctica sigue la técnica docente denominada "aprendizaje basado en problemas". Aprenderemos todo lo enumerado anteriormente mediante la resolución de una pregunta concreta que se formulará después de contextualizar ecológicamente el objeto de esta práctica: los pinares de repoblación. [Esta](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/presentaciones/generalidades_pinares_reboblacion_lowres.pdf) presentación muestra con detalle lo enumerado a continuación.
+El abordaje de los objetivos anteriores se realizará a través del estudio y análisis de una pregunta concreta. Así pues, esta práctica sigue la técnica docente denominada "aprendizaje basado en problemas". Aprenderemos todo lo enumerado anteriormente mediante la resolución de una pregunta concreta que se formulará después de contextualizar ecológicamente el objeto de esta práctica: los pinares de repoblación. [Esta](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/presentaciones/generalidades_pinares_reboblacion_lowres.pdf) presentación muestra con detalle lo enumerado a continuación.
 
 Los pinares de repoblación son masas forestales densas, monoespecíficas y coetáneas que se implantan en el territorio por una serie de razones:
 
@@ -101,9 +101,9 @@ Las plantas toman del suelo el agua que necesitan para vivir. Por ello es muy im
 
 La siguiente figura muestra una versión simplificada del flujo de trabajo que seguiremos durante el desarrollo de la actividad. Un flujo de trabajo es una representación gráfica de una serie de procedimientos ordenados secuencialmente y que van encaminados a lograr un objetivo concreto. Esta es nuestra primera versión del flujo de trabajo 
 
-![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/imagenes/flujograma_pinares_simplificado.png)
+![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/imagenes/flujograma_pinares_simplificado.png)
 
-El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/presentaciones/flujograma_pinares_repoblacion.drawio.zip) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
+El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/presentaciones/flujograma_pinares_repoblacion.drawio.zip) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
 
 
 
@@ -119,13 +119,13 @@ Así que el primer paso es identificar las variables ambientales y los criterios
 ## Material de partida
 Aunque se irán detallando y describiendo a lo largo del guión, aquí tienes la lista del material que necesitas para ejecutar esta práctica:
 
-+ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/geoinfo/MUCVA_25_multi_snevada.zip)
++ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/MUCVA_25_multi_snevada.zip)
 
-+ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/geoinfo/TCD_pinares_23030.tif)
++ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/TCD_pinares_23030.tif)
 
-+ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/geoinfo/cti_pinares_23030.tif)
++ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/cti_pinares_23030.tif)
 
-+ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pinares\_repoblacion\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/geoinfo/pinares_repoblacion_23030.tif)
++ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pinares\_repoblacion\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/pinares_repoblacion_23030.tif)
 
   
 
@@ -142,7 +142,7 @@ El algoritmo de QGIS que permite calcular el mapa de distancias necesita un rast
 
 Vamos con el paso a paso:
 
-- **(0)** Descarga el mapa de usos y coberturas vegetales de Sierra Nevada [aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/main/geoinfo/MUCVA_25_multi_snevada.zip). 
+- **(0)** Descarga el mapa de usos y coberturas vegetales de Sierra Nevada [aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/MUCVA_25_multi_snevada.zip). 
 - **(1)** Crear un campo nuevo llamado _dist\_targe_ en la tabla de atributos del shapefile llamado _MUCVA\_multitemporal.shp_. Debe de ser un campo numérico.
 - **(2)** Seleccionar los polígonos que tengan pinos. Para ello nos fijamos en el campo _DES\_UC07_, que contiene la descripción del uso del suelo en cada polígono en 2007. Veremos que hay una leyenda con muchos tipos. Buscamos aquellos que correspondan con bosques densos de coníferas. Y ejecutamos la siguiente consulta de selección con QGIS. Recuerda que hay que poner el nombre del cada campo cada vez que queremos seleccionar un tipo de uso. Y que el operador de unión es _OR_.
 
@@ -202,7 +202,7 @@ Vamos con el paso a paso:
 
 -  Asumiremos que la relación entre la variable (distancia) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el siguiente esquema:
 
-![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/imagenes/funcion_pertenencia_inversa.png)
+![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/imagenes/funcion_pertenencia_inversa.png)
 
 -  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_dist\_nat.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
 -  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster: **ojo: los valores que hay aquí pueden cambiar en tu capa. Así que revisa los metadatos y pon los valores máximos y mínimos adaptados a tu situación.**
@@ -222,7 +222,7 @@ Vamos con el paso a paso:
 -  Aunque se trata de una división muy sencilla, incluyo abajo el esquema que aplicaríamos para generar la ecuación de la recta directa, en caso de que la capa original no tuviera valores de entre 0 y 100.
 
 
-![](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2021_2022/imagenes/funcion_pertenencia_directa.png)
+![](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/imagenes/funcion_pertenencia_directa.png)
 
 ### Creación del mapa aptitud desde el punto de vista de la humedad del suelo. 
 
@@ -298,7 +298,7 @@ Lo ideal sería que fueras construyendo el informe conforme vas trabajando con l
 
 
 
-<img src="https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/main/imagenes/rubrica.png" alt="rubrica" style="zoom:200%;" />
+<img src="https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/2022-2023/imagenes/rubrica.png" alt="rubrica" style="zoom:200%;" />
 
   
 
