@@ -1,16 +1,14 @@
 # Guión de la práctica "Manejo de pinares de repoblación: un ejemplo de la importancia de la competencia intraespecífica"
 
 
-> + **_Versión_**: 2022-2023
+> + **_Versión_**: 2023-2024
 > + **_Asignatura (grado)_**: Ecología (CCAA)
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
-> + **Duración**: Tres sesiones de dos horas cada una.
+> + **Duración**: Dos sesiones de tres horas cada una.
 
 ![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/2022-2023/imagenes/portada.png)
 
-- PEDIR CON ANTELACIÓN QUE VEAN EL MATERIAL TEÓRICO.
-- EMPEZAR LA PRÁCTICA CON UN BREVÍSIMO RESUMEN DE LA TEORÍA. Y PREGUNTANDO DUDAS.
-- CAMBIAR ENTREGA: ALGO MÁS ECOLÓGICO. INFORME CON DISCUSIÓN DE LO QUE LES SALE EN UN SITIO CONCRETO, HACIENDO ZOOM, POR EJEMPLO
+
 
 ## Objetivos 
 
