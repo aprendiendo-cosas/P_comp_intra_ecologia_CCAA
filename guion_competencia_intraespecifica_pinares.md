@@ -6,7 +6,7 @@
 > + **_Autor_**: Curro Bonet-García (fjbonet@uco.es)
 > + **Duración**: Dos sesiones de tres horas cada una.
 
-![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/2022-2023/imagenes/portada.png)
+![portada](https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/2023_2024/imagenes/portada.png)
 
 
 
@@ -28,14 +28,14 @@ Esta práctica tiene los siguientes objetivos:
 
 ## Contextualización ecológica
 
-El abordaje de los objetivos anteriores se realizará a través del estudio y análisis de una pregunta concreta. Así pues, esta práctica sigue la técnica docente denominada "aprendizaje basado en problemas". Aprenderemos todo lo enumerado anteriormente mediante la resolución de una pregunta concreta que se formulará después de contextualizar ecológicamente el objeto de esta práctica: los pinares de repoblación. [Esta](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/presentaciones/generalidades_pinares_reboblacion_lowres.pdf) presentación muestra con detalle lo enumerado a continuación.
+El abordaje de los objetivos anteriores se realizará a través del estudio y análisis de una pregunta concreta. Así pues, esta práctica sigue la técnica docente denominada "aprendizaje basado en problemas". Aprenderemos todo lo enumerado anteriormente mediante la resolución de una pregunta concreta que se formulará después de contextualizar ecológicamente el objeto de esta práctica: los pinares de repoblación. [Esta](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/presentaciones/generalidades_pinares_reboblacion_lowres.pdf) presentación muestra con detalle lo enumerado a continuación.
 
 Los pinares de repoblación son masas forestales densas, monoespecíficas y coetáneas que se implantan en el territorio por una serie de razones:
 
 + Producción de madera. No es común en nuestras latitudes. La producción de madera en Andalucía es poco rentable.
 + Frenar la erosión: Es la razón fundamental por la que se realizaron las repoblaciones forestales en Andalucía durante buena parte del siglo XX.
 
-La implantación de los pinares de repoblación en Andalucía consiguió frenar la intensa erosión que habí en nuestros montes a principios del siglo XX. Sin embargo, las repoblaciones se hicieron con una densidad excesiva, lo cual provoca una intensa competencia intraespecífica. Esto, junto con la escasez de tratamientos selvícolas, hace que ahora estas masas generan ciertos problemas socioecológicos. 
+La implantación de los pinares de repoblación en Andalucía consiguió frenar la intensa erosión que había en nuestros montes a principios del siglo XX. Sin embargo, las repoblaciones se hicieron con una densidad excesiva, lo cual provoca una intensa competencia intraespecífica. Esto, junto con la escasez de tratamientos selvícolas (actuaciones forestales para extraer biomasa y reducir la densidad), hace que ahora estas masas generan ciertos problemas socioecológicos. 
 
 + Escasa o nula capacidad de regeneración.
 + Alto riesgo de incendio.
@@ -64,7 +64,7 @@ El abordaje de la pregunta anterior se sustenta en los siguientes conceptos ecol
 ## Zona de estudio
 Esta práctica se desarrolla en Sierra Nevada. La razón fundamental es que en ese macizo montañoso abundan los pinares de repoblación. En concreto hay unas 40.000 Has de pinares de repoblación, que suponen aproximadamente la mitad de toda la superficie boscosa de este espacio protegido. Otra razón importante es que, con un poco de suerte, haremos una salida de campo a Sierra Nevada ;)
 
-Este mapa muestra la ubicación de Sierra Nevada. Los pinares de repoblación son las formaciones de color verde oscuro que hay en la vertiente norte de la montaña. 
+Este mapa muestra la ubicación de Sierra Nevada. Los pinares de repoblación son las formaciones de color verde oscuro que hay en las vertientes norte y sur de la montaña. 
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d210192.78378166418!2d-3.1976269316260746!3d37.09960213399416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1ses!2ses!4v1584982155696!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
@@ -93,7 +93,7 @@ Como veremos en las siguientes secciones, obtendremos el mapa de distancias a pa
 
 ### **Capacidad del suelo para retener agua**
 
-Las plantas toman del suelo el agua que necesitan para vivir. Por ello es muy importante que el suelo tenga cierta cantidad de humedad. Esto es especialmente importante en ambientes mediterráneos como el nuestro, donde la sequía estival reduce notablemente la disponibilidad de agua en el suelo. Tendremos en cuenta esta variable de una manera muy rudimentaria que tiene en cuenta únicamente la topografía. Los lugares cóncavos tienden a acumular más agua que los convexos. Así, el grado de convexidad-concavidad del terreno nos ayuda a simular cómo se almacenaría el agua en el suelo. En estos casos se dice que usamos una variable fácil de obtener (concavidad-convexidad del territorio) como *subrrogado* de otra más compleja de calcular (humedad del suelo). Afortunadamente la [REDIAM](http://www.juntadeandalucia.es/medioambiente/site/rediam) (Red de Información Ambiental de Andalucía) suministra una capa que muestra la distribución de la curvatura de toda la región. Puedes descargarla [aquí](https://descargasrediam.cica.es/repo/s/RUR?path=%2F01_CARACTERIZACION_TERRITORIO%2F07_BASES_REF_ELEV%2F05_CURVATURA%2F01_PROYECTOS_REGIONALES%2F2006_07_AND_100m_026V_c%2FInfGeografica%2FInfRaster%2FETRS89_30%2FTIFF). He recortado esta imagen para que se ajuste a nuestra zona de estudio. Esta capa contiene valores que van desde -0.37 hasta 0.32. Los valores más altos corresponden con lugares más convexos, es decir, sitios en los que se acumula menos agua (cumbres de montañas, divisorias de aguas). Por contra, los valores más pequeños corresponden con lugares cóncavos (cauces, barrancos, etc.). Al igual que en el caso anterior, a valores más altos de la variable corresponden valores más bajos de aptitud. Es decir, a menor índice de humedad del suelo mayor idoneidad desde el punto de vista de los objetivos de este trabajo. 
+Las plantas toman del suelo el agua que necesitan para vivir. Por ello es muy importante que el suelo tenga cierta cantidad de humedad. Esto es especialmente importante en ambientes mediterráneos como el nuestro, donde la sequía estival reduce notablemente la disponibilidad de agua en el suelo. Tendremos en cuenta esta variable de una manera muy rudimentaria que tiene en cuenta únicamente la topografía. Los lugares cóncavos tienden a acumular más agua que los convexos. Así, el grado de convexidad-concavidad del terreno nos ayuda a simular cómo se almacenaría el agua en el suelo. En estos casos se dice que usamos una variable fácil de obtener (concavidad-convexidad del territorio) como *subrrogado* de otra más compleja de calcular (humedad del suelo). Afortunadamente la [REDIAM](http://www.juntadeandalucia.es/medioambiente/site/rediam) (Red de Información Ambiental de Andalucía) suministra una capa que muestra la distribución de la curvatura de toda la región. Puedes descargarla [aquí](https://descargasrediam.cica.es/repo/s/RUR?path=%2F01_CARACTERIZACION_TERRITORIO%2F07_BASES_REF_ELEV%2F05_CURVATURA%2F01_PROYECTOS_REGIONALES%2F2006_07_AND_100m_026V_c%2FInfGeografica%2FInfRaster%2FETRS89_30%2FTIFF) para toda Andalucía. He recortado esta imagen para que se ajuste a nuestra zona de estudio. En la sección "material de partida" tienes un enlace para descargarla. Esta capa contiene valores que van desde -0.37 hasta 0.32. Los valores más altos corresponden con lugares más convexos, es decir, sitios en los que se acumula menos agua (cumbres de montañas, divisorias de aguas). Por contra, los valores más pequeños corresponden con lugares cóncavos (cauces, barrancos, etc.). Al igual que en el caso anterior, a valores más altos de la variable corresponden valores más bajos de aptitud. Es decir, a menor índice de humedad del suelo mayor idoneidad desde el punto de vista de los objetivos de este trabajo. 
 
 
 
@@ -101,9 +101,9 @@ Las plantas toman del suelo el agua que necesitan para vivir. Por ello es muy im
 
 La siguiente figura muestra una versión simplificada del flujo de trabajo que seguiremos durante el desarrollo de la actividad. Un flujo de trabajo es una representación gráfica de una serie de procedimientos ordenados secuencialmente y que van encaminados a lograr un objetivo concreto. Esta es nuestra primera versión del flujo de trabajo 
 
-![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/imagenes/flujograma_pinares_simplificado.png)
+![flujograma_simple](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/imagenes/flujograma_pinares_simplificado.png)
 
-El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/presentaciones/flujograma_pinares_repoblacion.drawio.zip) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
+El siguiente esquema es un documento dinámico creado con una herramienta llamada [draw.io](https://www.draw.io/) . Se trata de una versión detallada del flujo de trabajo que seguiremos. Puedes utilizarlo para realizar la práctica en casa o en clase. [Aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/presentaciones/flujograma_pinares_repoblacion.drawio.zip) puedes descargar el mismo esquema que ves abajo. En caso de que lo hayas descargado, lo podrás abrir desde [draw.io](https://www.draw.io/).
 
 
 
@@ -119,13 +119,13 @@ Así que el primer paso es identificar las variables ambientales y los criterios
 ## Material de partida
 Aunque se irán detallando y describiendo a lo largo del guión, aquí tienes la lista del material que necesitas para ejecutar esta práctica:
 
-+ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/MUCVA_25_multi_snevada.zip)
++ Mapa de usos y coberturas vegetales del suelo de Sierra Nevada. Usaremos esta capa para generar el mapa de distancias de los pinares a las manchas de vegetación natural más cercana. [Este](https://youtu.be/RNQ7qwG5UDQ) video describe su estructura de datos: [_MUCVA\_25\_multi\_snevada.zip_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/geoinfo/MUCVA_25_multi_snevada.zip)
 
-+ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/TCD_pinares_23030.tif)
++ Mapa de densidad de los pinares, expreasada en porcentaje: [_TCD\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/geoinfo/TCD_pinares_23030.tif)
 
-+ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/cti_pinares_23030.tif)
++ Mapa de humedad potencial del suelo basada en la topografía: [_cti\_pinares\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/geoinfo/cti_pinares_23030.tif)
 
-+ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pinares\_repoblacion\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/pinares_repoblacion_23030.tif)
++ Mapa de distribución de los pinares de repoblación en Sierra Nevada: [_pinares\_repoblacion\_23030.tif_](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/pinares_repoblacion_23030.tif)
 
   
 
@@ -142,7 +142,7 @@ El algoritmo de QGIS que permite calcular el mapa de distancias necesita un rast
 
 Vamos con el paso a paso:
 
-- **(0)** Descarga el mapa de usos y coberturas vegetales de Sierra Nevada [aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/geoinfo/MUCVA_25_multi_snevada.zip). 
+- **(0)** Descarga el mapa de usos y coberturas vegetales de Sierra Nevada [aquí](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/geoinfo/MUCVA_25_multi_snevada.zip). 
 - **(1)** Crear un campo nuevo llamado _dist\_targe_ en la tabla de atributos del shapefile llamado _MUCVA\_multitemporal.shp_. Debe de ser un campo numérico.
 - **(2)** Seleccionar los polígonos que tengan pinos. Para ello nos fijamos en el campo _DES\_UC07_, que contiene la descripción del uso del suelo en cada polígono en 2007. Veremos que hay una leyenda con muchos tipos. Buscamos aquellos que correspondan con bosques densos de coníferas. Y ejecutamos la siguiente consulta de selección con QGIS. Recuerda que hay que poner el nombre del cada campo cada vez que queremos seleccionar un tipo de uso. Y que el operador de unión es _OR_.
 
@@ -202,7 +202,7 @@ Vamos con el paso a paso:
 
 -  Asumiremos que la relación entre la variable (distancia) y su aptitud es lineal e inversa. Es decir, necesitamos conocer los parámetros de una recta que cumple las características expresadas en el siguiente esquema:
 
-![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/imagenes/funcion_pertenencia_inversa.png)
+![imagen](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/imagenes/funcion_pertenencia_inversa.png)
 
 -  Para conocer los valores máximos y mínimos de la capa que queremos transformar en aptitud (_dist\_nat.tif_), vamos a las propiedades de la misma en QGIS y miramos en la pestaña "información".
 -  Una vez obtenidos los valores de la función lineal, la introducimos en la calculadora raster: **ojo: los valores que hay aquí pueden cambiar en tu capa. Así que revisa los metadatos y pon los valores máximos y mínimos adaptados a tu situación.**
@@ -222,7 +222,7 @@ Vamos con el paso a paso:
 -  Aunque se trata de una división muy sencilla, incluyo abajo el esquema que aplicaríamos para generar la ecuación de la recta directa, en caso de que la capa original no tuviera valores de entre 0 y 100.
 
 
-![](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2022-2023/imagenes/funcion_pertenencia_directa.png)
+![](https://github.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/raw/2023_2024/imagenes/funcion_pertenencia_directa.png)
 
 ### Creación del mapa aptitud desde el punto de vista de la humedad del suelo. 
 
@@ -285,20 +285,14 @@ El siguiente video muestra (en inglés) la secuencia de acciones necesarias para
 
 Dado que esta práctica tiene dos sesiones, en el último día deberás entregar un breve informe que contenga la siguiente información:
 
-+ Lista ordenada de los pasos que has ido ejecutando con el ordenador para obtener el mapa final con los lugares más adecuados para reducir la competencia intraespecífica. Entre estos pasos debe de estar la combinación de pesos que consideres más adecuada para satisfacer nuestros objetivos. Deberás ir completando esta parte del informe conforme vayamos trabajando juntos en clase. Puedes describir cada paso como quieras. Te sugiero algo así:
-  + Paso 1: [nombre del paso]
-    + Nombre de la fuente de datos de entrada: [nombre_fuente]
-    + Procesamiento realizado: [nombre_procesamiento],[software], [parámetros]
-    + Nombre de la fuente de datos de salida: [nombre_resultado]
-  
-  Esto es solo una sugerencia. Hay dos razones para que prefiera esta forma: a) así describimos los procesos de forma más "pura", sin detallar cómo se hace con una herramienta concreta. Esto incide en el núcleo de los análisis. b) la idea final es que los procesos documentados por humanos sean ejecutables en algún momento por ordenadores. No obstante, entiendo que para vosotros puede ser difícil hacerlo así por primera vez. Así que, os sugiero que documentéis los pasos como mejor os parezca, pero que al menos en una ocasión uséis el método que os propongo.
-+ Resultado obtenido. Deberás incluir en el informe un mapa de una zona que elijas de Sierra Nevada. Además, deberás describir dicha zona usando términos ecológicos relacionados con la competencia intraespecífica. Por ejemplo: "la zona seleccionada se caracteriza por estar en una ladera de orientación norte. Hay un pinar de repoblación denso que no tiene cerca ninguna mancha donadora de semillas. Sin embargo, el suelo parece adecuado para almacenar agua, por lo que se ha considerado que es un lugar adecuado para realizar tratamientos forestales".
++ Reflexión sobre el aprendizaje realizado. Describe brevemente tus impresiones y el aprendizaje que crees que has adquirido con relación a cada uno de los objetivos iniciales de esta práctica. No tiene que ser una tesis doctoral. Basta una breve reflexión por objetivo. Si has aprendido algo que no estaba entre los objetivos iniciales, indícalo también. Por último, indica dónde has encontrado las principales dificultades al hacer la práctica.
++ Resultado obtenido. Deberás incluir en el informe un mapa de una zona que elijas de Sierra Nevada. Busca un lugar concreto, acércate a él y describe dicha zona usando términos ecológicos relacionados con la competencia intraespecífica. Por ejemplo: "la zona seleccionada se caracteriza por estar en una ladera de orientación norte. Hay un pinar de repoblación denso que no tiene cerca ninguna mancha donadora de semillas. Además, el suelo parece adecuado para almacenar agua, por lo que se ha considerado que es un lugar adecuado para realizar tratamientos forestales". Incluye un pantallazo de la zona que hayas elegido.
 
-Lo ideal sería que fueras construyendo el informe conforme vas trabajando con los datos. Piensa que es una especie de guión que tú elaboras por si en alguna ocasión tienes que repetir el trabajo. Sé que no tendrás mucho tiempo para trabajar el documento, así que no te preocupes demasiado por el formato ni por la maquetación. Lo importante son los criterios que se muestran en la siguiente rúbrica. Sube el informe en formato procesador de textos a [esta](https://www.turnitin.com/t_submit.asp?r=98.3960297181806&svr=39&lang=es&aid=132557557) página de Turnitin.
+Cuando hayas terminado la práctica, sube el informe [aquí](https://www.turnitin.com/t_submit.asp?r=83.9518367766608&svr=6&lang=en_us&aid=148926216). Recuerda que no hay una calificación asociada a este ejercicio. Yo lo leeré y te lo devolveré con comentarios que espero sirvan para que aprendas más y mejor. 
+
+Además del informe entregable, te sugiero que vayas elaborando una especie de "diario" conforme avanzas en la práctica. El objetivo es que anotes cómo vas evolucionando en cada uno de los pasos y puedes repetirlo si fuera necesario. También así vas haciendo un seguimiento de tu aprendizaje. No tienes que entregar este diario.
 
 
 
-<img src="https://raw.githubusercontent.com/aprendiendo-cosas/P_comp_intra_ecologia_CCAA/2022-2023/imagenes/rubrica.png" alt="rubrica" style="zoom:200%;" />
 
-  
 
